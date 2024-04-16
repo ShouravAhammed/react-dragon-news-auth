@@ -11,6 +11,8 @@ const BtnLogin = () => {
 
   const handleGoogle = () => {
     googleAuth()
+    .then(result => console.log(result.user))
+    .catch(error => console.log(error.message))
   }
 
     return (

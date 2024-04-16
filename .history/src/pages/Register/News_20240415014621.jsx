@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import prop-types from 'prop-types'
 
 const News = ({newDetail}) => {
     const {title, image_url, details, _id} = newDetail || {}

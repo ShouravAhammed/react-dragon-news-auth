@@ -9,7 +9,7 @@ const Navbar = () => {
     const navLinks = 
     <>
         <li><NavLink to={'/'} className={({isActive}) => isActive ? 'text-[#D72050]' : 'text-[#706F6F]'}>Home</NavLink></li>
-        <li><NavLink to={'/About'} className={({isActive}) => isActive ? 'text-[#D72050]' : 'text-[#706F6F]'}>About</NavLink></li>
+        <li><NavLink to={'/about'} className={({isActive}) => isActive ? 'text-[#D72050]' : 'text-[#706F6F]'}>About</NavLink></li>
         <li><NavLink to={'/career'} className={({isActive}) => isActive ? 'text-[#D72050]' : 'text-[#706F6F]'}>Career</NavLink></li>
         <li><NavLink to={'/login'} className={({isActive}) => isActive ? 'text-[#D72050]' : 'text-[#706F6F]'}>Login</NavLink></li>
     </>
@@ -40,7 +40,7 @@ const Navbar = () => {
   <div className="navbar-end">
   <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
         <div className="w-10 rounded-full">
-          <img alt="Tailwind CSS Navbar component" src={user ? userDetails?.photoURL : DefaultUser} />
+          <img alt="Tailwind CSS Navbar component" src={userDetails?.photoURL ? userDetails.photoURL : DefaultUser} />
         </div>
       </div>
 

@@ -31,7 +31,6 @@ const AuthProvider = ({children}) => {
         .then(result => {
             const user = result.user
             console.log(user)
-            setUserDetails(user);
         })
         .catch(error => console.log(error.message))
     }
@@ -53,8 +52,7 @@ const AuthProvider = ({children}) => {
         setTheUser,
         googleAuth,
         logOut,
-        loading,
-        userDetails
+        loading
     }
     return (
         <AuthContext.Provider value={authInfo}>

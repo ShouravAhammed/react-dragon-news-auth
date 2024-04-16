@@ -8,7 +8,6 @@ const AuthProvider = ({children}) => {
     
     const [user, setUser] = useState(null)
     const [loading, setLoading] = useState(true)
-    const [userDetails, setUserDetails] = useState(null);
     const provider = new GoogleAuthProvider();
 
     const createUser = (email, password) => {
@@ -28,11 +27,7 @@ const AuthProvider = ({children}) => {
     const googleAuth = () => {
         setLoading(true)
         signInWithPopup(auth, provider)
-        .then(result => {
-            const user = result.user
-            console.log(user)
-            setUserDetails(user);
-        })
+        .then(result => console.log(result.user))
         .catch(error => console.log(error.message))
     }
 
@@ -53,8 +48,7 @@ const AuthProvider = ({children}) => {
         setTheUser,
         googleAuth,
         logOut,
-        loading,
-        userDetails
+        loading
     }
     return (
         <AuthContext.Provider value={authInfo}>

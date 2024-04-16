@@ -11,6 +11,7 @@ const BtnLogin = () => {
 
   const handleGoogle = () => {
     googleAuth()
+    
   }
 
     return (
